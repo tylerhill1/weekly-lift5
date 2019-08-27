@@ -112,7 +112,7 @@ export default class CreateExercise extends Component {
                     <label className="form-check-label">Lower Body A</label>
                     </div>
                     <div className="form-check form-check-inline">
-                    <input className="form-check-input" type="radio" name="exerciseDayOptions" id="lowerBodyB" value="Lower Body A" checked={this.state.exercise_day==='Lower Body B'} onChange={this.onChangeExerciseDay} />
+                    <input className="form-check-input" type="radio" name="exerciseDayOptions" id="lowerBodyB" value="Lower Body B" checked={this.state.exercise_day==='Lower Body B'} onChange={this.onChangeExerciseDay} />
                     <label className="form-check-label">Lower Body B</label>
                     </div>
             </div>
