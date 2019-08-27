@@ -9,13 +9,13 @@ const PORT = process.env.PORT || 4000;
 let Exercise = require("./exercise.model");
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("../build"));
+    app.use(express.static("build"));
 }
 
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/exercises', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://thill:paintridge12@ds359077.mlab.com:59077/heroku_3nlr30m7', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once("open", function() {
